@@ -1,0 +1,31 @@
+<div class="container-fluid text-center">
+        <form role="form">
+            <div class="row header">
+                mPIN
+            </div>
+
+            <div class="row pin-input">
+                <div class="form-group ">
+                    <label for="pin">Your unique PIN</label>
+                    <input class="form-control input-lg" id="pin" [value]='pin' type="password" maxlength="4" placeholder="Enter 4 digits pin" readonly>
+                </div>
+            </div>
+
+            <div class="pin-keys">
+                <div *ngFor='#num of [1,4,7]' class="row">
+                    <button type="button" (click)='append(num)' class="btn btn-circle btn-default">{{num}}</button>
+                    <button type="button" (click)='append(num + 1)' class="btn btn-circle btn-default">{{num+1}}</button>
+                    <button type="button" (click)='append(num + 2)' class="btn btn-circle btn-default">{{num+2}}</button>
+                </div>                
+                <div class="row">
+                    <button type="button" (click)='append(0)' class="btn btn-circle btn-default">0</button>
+                    <button type="button" (click)='clear()' class="btn btn-circle btn-default">Clr</button>
+                </div>
+            </div>
+
+            <div class="row footer">
+                <button type="submit" class="btn btn-default btn-lg">BACK</button>
+                <button type="submit" class="btn btn-default btn-lg">NEXT</button>
+            </div>
+        </form>
+    </div>
