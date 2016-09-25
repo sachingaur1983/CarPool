@@ -1,0 +1,49 @@
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 28px;
+    line-height: 1.00;
+    border-radius: 50%;
+    border-color: black;
+    margin: 10px;
+}
+
+.btn-circle:focus {
+    outline: none !important;
+    background-color: white;
+    border-color: black;
+}
+
+.header {
+    background-color: black;
+    padding: 1%;
+    color: white;
+    font-size: 26px;
+    top: 0px;
+}
+
+.footer {
+    background-color: white;
+    padding: 1%;
+    color: white;
+    font-size: 26px;
+    bottom: 1%;
+    position: fixed;
+    width: 100%;
+}
+
+.pin-keys {
+    margin: 1%;
+}
+
+.pin-input {
+    font-size: 26px;
+    margin: 1%;
+    text-align: center;
+}
+
+#pin {
+    background-color: white;
+}
