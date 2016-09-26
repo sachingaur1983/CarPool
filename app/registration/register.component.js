@@ -22,10 +22,12 @@ var RegisterComponent = (function () {
     }
     RegisterComponent.prototype.onRegister = function () {
         console.log(JSON.stringify(this.userInfo));
-        this._appService.register(this.userInfo).then(function (result) {
-            console.log("service: " + result);
-        });
+        this._appService.register(this.userInfo).then(this.handleResult);
+        this._appService.getUsers().then(this.handleResult);
         this.router.navigate(['/pattern']);
+    };
+    RegisterComponent.prototype.handleResult = function (result) {
+        console.log("service output \n" + JSON.stringify(result));
     };
     Object.defineProperty(RegisterComponent.prototype, "diagnostic", {
         get: function () { return JSON.stringify(this.userInfo); },

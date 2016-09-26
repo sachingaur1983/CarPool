@@ -21,10 +21,14 @@ export class RegisterComponent {
 
     onRegister(): void {
         console.log(JSON.stringify(this.userInfo));
-        this._appService.register(this.userInfo).then(result => {
-            console.log(`service: ${result}`);
-        })
+        this._appService.register(this.userInfo).then(this.handleResult);
+        this._appService.getUsers().then(this.handleResult);
         this.router.navigate(['/pattern']);
+    }
+
+    handleResult(result: any): void
+    {
+        console.log(`service output \n${JSON.stringify(result)}`);
     }
 
     get diagnostic() { return JSON.stringify(this.userInfo); }
